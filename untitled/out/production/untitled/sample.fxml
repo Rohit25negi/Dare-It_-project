@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="419.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane fx:id="anchor" layoutX="73.0" layoutY="35.0" prefHeight="294.0" prefWidth="202.0">
+         <children>
+            <TableView fx:id="table" layoutX="2.0" layoutY="3.0" prefHeight="306.0" prefWidth="200.0" />
+         </children>
+      </Pane>
+      <Button layoutX="148.0" layoutY="365.0" mnemonicParsing="false" text="Conect" />
+   </children>
+</Pane>

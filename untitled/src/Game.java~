@@ -1,0 +1,77 @@
+import javafx.application.Application;
+import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
+import javafx.scene.Scene;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.GridPane;
+import javafx.scene.layout.Pane;
+import javafx.stage.Stage;
+import javafx.scene.image.*;
+import javax.xml.soap.Node;
+import java.io.FileOutputStream;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.util.ResourceBundle;
+
+/**
+ * Created by Champ on 4/12/2016.
+ */
+public class Game extends Application implements Initializable{
+    public static void main(String args[])
+    {
+    launch(args);
+    }
+    @FXML
+   public GridPane grid;
+
+    @Override
+    public void start(Stage primaryStage) throws Exception {
+        Pane root= FXMLLoader.load(FXMLLoader.getDefaultClassLoader().getResource("Game.fxml"));
+        primaryStage.setScene(new Scene(root, 500, 500));
+
+        primaryStage.show();
+
+    }
+
+    Cell cell[][]=new Cell[3][3];
+    @Override
+    public void initialize(URL location, ResourceBundle resources) {
+        grid.setGridLinesVisible(true);
+        ObservableList<javafx.scene.Node> list=grid.getChildren();
+	
+        for(int i=0,j=0;j<cell.length;i++)
+        {   Pane pane=(Pane)list.get(j*3+i);
+            pane.setOnMouseClicked(new EventHandler<MouseEvent>() {
+                @Override
+                public void handle(MouseEvent event) {
+			Integer x=null,y=null;
+			x=GridPane.getRowIndex(pane);
+			y=GridPane.getColumnIndex(pane);
+			x=x==null?0:x;
+			y=y==null?0:y;
+			cell[x][y].x=1;
+		
+			cell[x][y].pane.setStyle("-fx-background-color:blue;");
+                    	
+
+                }
+            });
+		System.out.println("initializing "+(j)+":"+(i%3));
+            cell[j][i%3]=new Cell(pane);
+            if(i==2){j++;i=-1;}
+        }
+    }
+
+    class Cell
+    {
+        byte x;
+        Pane pane;
+        Cell(Pane pane)
+        {
+            this.pane=pane;
+        }
+    }
+}

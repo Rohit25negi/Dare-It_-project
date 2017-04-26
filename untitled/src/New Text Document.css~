@@ -1,0 +1,8 @@
+
+Pane:hover
+{
+-fx-border-color:#00FF40;
+-fx-border-width:2px;
+-fx-background:url('multiply.png');
+}
+

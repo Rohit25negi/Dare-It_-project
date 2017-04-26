@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Main2">
+   <children>
+      <Button fx:id="back" layoutX="134.0" layoutY="343.0" mnemonicParsing="false" onAction="#back" prefHeight="15.0" prefWidth="123.0" text="Back">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font></Button>
+      <Button layoutX="135.0" layoutY="390.0" mnemonicParsing="false" onAction="#forward" prefHeight="25.0" prefWidth="123.0" text="Dive Into">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font></Button>
+      <Button layoutX="369.0" layoutY="343.0" mnemonicParsing="false" onAction="#download" prefHeight="36.0" prefWidth="116.0" text="Download">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font></Button>
+      <Button layoutX="369.0" layoutY="388.0" mnemonicParsing="false" onAction="#upload" prefHeight="35.0" prefWidth="116.0" text="Upload">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font></Button>
+      <Button layoutX="134.0" layoutY="436.0" mnemonicParsing="false" onAction="#goToRoot" prefHeight="25.0" prefWidth="123.0" text="Go -&gt; Root" wrapText="true">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font></Button>
+      <Button fx:id="delete" layoutX="369.0" layoutY="432.0" mnemonicParsing="false" onAction="#delete" prefHeight="35.0" prefWidth="116.0" text="Delete">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font></Button>
+      <Button fx:id="update" layoutX="264.0" layoutY="391.0" mnemonicParsing="false" onAction="#update" prefHeight="35.0" prefWidth="99.0" text="Update">
+         <font>
+            <Font name="Arial" size="19.0" />
+         </font></Button>
+      <TableView fx:id="table" layoutX="63.0" layoutY="44.0" prefHeight="289.0" prefWidth="470.0">
+        <columns>
+
+        </columns>
+      </TableView>
+      <Label fx:id="directory" layoutX="65.0" layoutY="19.0" prefHeight="25.0" prefWidth="470.0" text="Directory">
+         <font>
+            <Font name="Arial" size="14.0" />
+         </font></Label>
+
+
+   </children>
+</Pane>

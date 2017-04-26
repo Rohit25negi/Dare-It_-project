@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="79.0" prefWidth="206.0" stylesheets="@New%20Text%20Document.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OnYo">
+   <children>
+      <Button id="Button" fx:id="no" layoutX="42.0" layoutY="27.0" mnemonicParsing="false" onAction="#no" prefHeight="17.0" prefWidth="53.0" styleClass="Button" text="No">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font></Button>
+      <Button id="Button" fx:id="yes" layoutX="116.0" layoutY="26.0" mnemonicParsing="false" onAction="#yes" prefHeight="32.0" prefWidth="63.0" styleClass="Button" text="Yes">
+         <font>
+            <Font name="Arial" size="17.0" />
+         </font></Button>
+      <Label layoutX="34.0" layoutY="4.0" prefHeight="20.0" prefWidth="163.0" text="Apply Modification">
+         <font>
+            <Font name="Arial Bold" size="17.0" />
+         </font></Label>
+   </children>
+</Pane>
